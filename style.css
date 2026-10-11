@@ -548,3 +548,18 @@ span {
     }
 }
 /* Contact Selesai */
+
+/* Footer Start */
+footer {
+    background-color: #596266;
+    color: #bdd1da;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1.4rem;
+    color: white
+}
