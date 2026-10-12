@@ -415,8 +415,10 @@ span {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    background-color: black;
-    padding-top: 10rem;
+    background-color: #0b0c10;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    min-height: 85vh;
 }
 
 .contact .heading {
@@ -425,126 +427,80 @@ span {
     text-align: center;
 }
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 5rem;
+.social-contact-container {
     width: 100%;
+    max-width: 80rem;
+    background-color: #12141a;
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    border: 0.15rem solid rgba(189, 209, 218, 0.3);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-.contact-info {
-    flex: 1;
-    max-width: 45rem;
-}
-
-.contact-info h3 {
-    font-size: 3rem;
+.social-contact-container h3 {
+    font-size: 3.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.contact-info p {
+.social-contact-container p {
     font-size: 1.6rem;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin-bottom: 3rem;
+    color: #c5c6c7;
+    margin-bottom: 3.5rem;
 }
 
-.info-box {
-    display: flex;
-    flex-direction: column;
+.social-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
 }
 
-.info-item {
+.social-card {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 1.5rem;
-    background-color: #121212;
+    padding: 2rem 2.5rem;
+    background-color: #1a1d24;
     border: 0.15rem solid #BDD1DA;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.social-card i {
+    font-size: 3.5rem;
+    color: #BDD1DA;
     transition: 0.3s ease;
 }
 
-.info-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(189, 209, 218, 0.3);
-}
-
-.info-item i {
-    font-size: 2.5rem;
-    color: #BDD1DA;
-}
-
-.info-item h4 {
-    font-size: 1.6rem;
-    color: #BDD1DA;
-}
-
-.info-item p {
-    font-size: 1.4rem;
+.social-card .social-text h4 {
+    font-size: 1.8rem;
     color: white;
+    font-weight: 600;
+}
+
+.social-card .social-text p {
+    font-size: 1.4rem;
+    color: #BDD1DA;
     margin-bottom: 0;
 }
 
-.contact-form {
-    flex: 1;
-    max-width: 55rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(189, 209, 218, 0.3);
+    background-color: #20242d;
 }
 
-.contact-form .input-box {
-    display: flex;
-    gap: 1.5rem;
+.social-card:hover i {
+    transform: scale(1.15);
+    color: #ffffff;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: white;
-    background-color: #121212;
-    border: 0.15rem solid #BDD1DA;
-    border-radius: 1rem;
-    transition: 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    box-shadow: 0 0 15px #BDD1DA;
-    border-color: #BDD1DA;
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 18rem;
-}
-
-.contact-form .btn {
-    align-self: flex-start;
-    margin-top: 1rem;
-}
-
-@media (max-width: 995px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info,
-    .contact-form {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .contact-form .input-box {
-        flex-direction: column;
+@media (max-width: 600px) {
+    .social-cards {
+        grid-template-columns: 1fr;
     }
 }
 /* Contact Selesai */
